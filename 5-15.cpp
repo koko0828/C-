@@ -11,16 +11,14 @@ int random() {                                     //隨機取數:1~3
 int main() {
 	srand(time(NULL));                             //依時間設置種子碼
 	int num[10] = { 0 };                           //宣告陣列，隨機數陣列
-	int PIN_number;                                //宣告整數，PIN_number
+	int PIN_number = 12345;                        //宣告整數，PIN_number = 12345
 	int new_pin = 0;                               //新密碼
 	int response = 0;                              //輸入新驗證碼
 
 	for (int i = 0; i < 10; i++) {
 		num[i] = random();                              //10個隨機數丟進陣列
-	}
-	cout << "enter your PIN number (00000~99999) =>";   
-	cin >> PIN_number;                                  //輸入密碼
-	cout << "PIN : ";          
+	}           
+	cout << endl << "PIN : ";
 	for (int i = 0; i < 10; i++) {                      //輸出0~9對應的對應數字
 		cout << i << " ";
 	}
